@@ -1,0 +1,19 @@
+[2025-05-12T14:31:04.560+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_staging_dag.load_staging_customers scheduled__2025-03-22T00:00:00+00:00 [queued]>
+[2025-05-12T14:31:04.671+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_staging_dag.load_staging_customers scheduled__2025-03-22T00:00:00+00:00 [queued]>
+[2025-05-12T14:31:04.672+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-05-12T14:31:05.126+0000] {taskinstance.py:2191} INFO - Executing <Task(PostgresOperator): load_staging_customers> on 2025-03-22 00:00:00+00:00
+[2025-05-12T14:31:05.155+0000] {standard_task_runner.py:60} INFO - Started process 12927 to run task
+[2025-05-12T14:31:05.172+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'raw_to_staging_dag', 'load_staging_customers', 'scheduled__2025-03-22T00:00:00+00:00', '--job-id', '3556', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_staging_dag.py', '--cfg-path', '/tmp/tmpwj3odhwu']
+[2025-05-12T14:31:05.176+0000] {standard_task_runner.py:88} INFO - Job 3556: Subtask load_staging_customers
+[2025-05-12T14:31:05.427+0000] {task_command.py:423} INFO - Running <TaskInstance: raw_to_staging_dag.load_staging_customers scheduled__2025-03-22T00:00:00+00:00 [running]> on host 03858235192c
+[2025-05-12T14:31:05.794+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simran' AIRFLOW_CTX_DAG_ID='raw_to_staging_dag' AIRFLOW_CTX_TASK_ID='load_staging_customers' AIRFLOW_CTX_EXECUTION_DATE='2025-03-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-22T00:00:00+00:00'
+[2025-05-12T14:31:05.797+0000] {sql.py:276} INFO - Executing: INSERT INTO staging.customers
+SELECT * FROM raw.customers;
+[2025-05-12T14:31:05.841+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-12T14:31:05.896+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-12T14:31:05.933+0000] {sql.py:450} INFO - Running statement: INSERT INTO staging.customers
+SELECT * FROM raw.customers;, parameters: None
+[2025-05-12T14:31:05.964+0000] {sql.py:459} INFO - Rows affected: 210
+[2025-05-12T14:31:06.100+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=raw_to_staging_dag, task_id=load_staging_customers, execution_date=20250322T000000, start_date=20250512T143104, end_date=20250512T143106
+[2025-05-12T14:31:06.243+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-05-12T14:31:06.401+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

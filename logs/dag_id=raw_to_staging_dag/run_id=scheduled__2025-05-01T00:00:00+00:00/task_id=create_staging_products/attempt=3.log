@@ -1,0 +1,38 @@
+[2025-05-11T14:19:24.501+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_staging_dag.create_staging_products scheduled__2025-05-01T00:00:00+00:00 [queued]>
+[2025-05-11T14:19:24.519+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_staging_dag.create_staging_products scheduled__2025-05-01T00:00:00+00:00 [queued]>
+[2025-05-11T14:19:24.522+0000] {taskinstance.py:2170} INFO - Starting attempt 3 of 4
+[2025-05-11T14:19:24.587+0000] {taskinstance.py:2191} INFO - Executing <Task(PostgresOperator): create_staging_products> on 2025-05-01 00:00:00+00:00
+[2025-05-11T14:19:24.593+0000] {standard_task_runner.py:60} INFO - Started process 5977 to run task
+[2025-05-11T14:19:24.599+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'raw_to_staging_dag', 'create_staging_products', 'scheduled__2025-05-01T00:00:00+00:00', '--job-id', '2521', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_staging_dag.py', '--cfg-path', '/tmp/tmpxoidkept']
+[2025-05-11T14:19:24.611+0000] {standard_task_runner.py:88} INFO - Job 2521: Subtask create_staging_products
+[2025-05-11T14:19:24.725+0000] {task_command.py:423} INFO - Running <TaskInstance: raw_to_staging_dag.create_staging_products scheduled__2025-05-01T00:00:00+00:00 [running]> on host 03858235192c
+[2025-05-11T14:19:24.849+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simran' AIRFLOW_CTX_DAG_ID='raw_to_staging_dag' AIRFLOW_CTX_TASK_ID='create_staging_products' AIRFLOW_CTX_EXECUTION_DATE='2025-05-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-01T00:00:00+00:00'
+[2025-05-11T14:19:24.852+0000] {sql.py:276} INFO - Executing: CREATE TABLE IF NOT EXISTS staging.products AS
+SELECT * FROM raw.product WHERE 1=0;
+[2025-05-11T14:19:24.885+0000] {base.py:83} INFO - Using connection ID 'postgres_local' for task execution.
+[2025-05-11T14:19:24.947+0000] {base.py:83} INFO - Using connection ID 'postgres_local' for task execution.
+[2025-05-11T14:19:24.954+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/operators/sql.py", line 282, in execute
+    output = hook.run(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 391, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/postgres/hooks/postgres.py", line 158, in get_conn
+    self.conn = psycopg2.connect(**conn_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+[2025-05-11T14:19:24.974+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=raw_to_staging_dag, task_id=create_staging_products, execution_date=20250501T000000, start_date=20250511T141924, end_date=20250511T141924
+[2025-05-11T14:19:25.030+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 2521 for task create_staging_products (connection to server at "localhost" (::1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+; 5977)
+[2025-05-11T14:19:25.047+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-05-11T14:19:25.114+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

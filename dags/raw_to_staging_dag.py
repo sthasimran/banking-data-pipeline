@@ -26,7 +26,7 @@ with DAG(
     # -- Customers --
     create_staging_customers = PostgresOperator(
         task_id='create_staging_customers',
-        postgres_conn_id='postgres_local',
+        postgres_conn_id='airflow_db',
         sql='sql/create_staging_customers.sql',
         retries=3, 
         retry_delay=timedelta(minutes=5),
@@ -36,7 +36,7 @@ with DAG(
 
     load_staging_customers = PostgresOperator(
         task_id='load_staging_customers',
-        postgres_conn_id='postgres_local',
+        postgres_conn_id='airflow_db',
         sql='sql/load_staging_customers.sql',
         retries=3,
         retry_delay=timedelta(minutes=5),
@@ -47,7 +47,7 @@ with DAG(
     # -- Accounts --
     create_staging_accounts = PostgresOperator(
         task_id='create_staging_accounts',
-        postgres_conn_id='postgres_local',
+        postgres_conn_id='airflow_db',
         sql='sql/create_staging_accounts.sql',
         retries=3,
         retry_delay=timedelta(minutes=5),
@@ -55,7 +55,7 @@ with DAG(
 
     load_staging_accounts = PostgresOperator(
         task_id='load_staging_accounts',
-        postgres_conn_id='postgres_local',
+        postgres_conn_id='airflow_db',
         sql='sql/load_staging_accounts.sql',
         retries=3,
         retry_delay=timedelta(minutes=5),
@@ -64,7 +64,7 @@ with DAG(
     # -- Cards --
     create_staging_cards = PostgresOperator(
         task_id='create_staging_cards',
-        postgres_conn_id='postgres_local',
+        postgres_conn_id='airflow_db',
         sql='sql/create_staging_cards.sql',
         retries=3,
         retry_delay=timedelta(minutes=5),
@@ -72,7 +72,7 @@ with DAG(
 
     load_staging_cards = PostgresOperator(
         task_id='load_staging_cards',
-        postgres_conn_id='postgres_local',
+        postgres_conn_id='airflow_db',
         sql='sql/load_staging_cards.sql',
         retries=3,
         retry_delay=timedelta(minutes=5),
@@ -81,7 +81,7 @@ with DAG(
     # -- Transactions --
     create_staging_transactions = PostgresOperator(
         task_id='create_staging_transactions',
-        postgres_conn_id='postgres_local',
+        postgres_conn_id='airflow_db',
         sql='sql/create_staging_transactions.sql',
         retries=3,
         retry_delay=timedelta(minutes=5),
@@ -89,7 +89,7 @@ with DAG(
 
     load_staging_transactions = PostgresOperator(
         task_id='load_staging_transactions',
-        postgres_conn_id='postgres_local',
+        postgres_conn_id='airflow_db',
         sql='sql/load_staging_transactions.sql',
         retries=3,
         retry_delay=timedelta(minutes=5),
@@ -98,7 +98,7 @@ with DAG(
     # -- Products --
     create_staging_products = PostgresOperator(
         task_id='create_staging_products',
-        postgres_conn_id='postgres_local',
+        postgres_conn_id='airflow_db',
         sql='sql/create_staging_products.sql',
         retries=3,
         retry_delay=timedelta(minutes=5),
@@ -106,7 +106,7 @@ with DAG(
 
     load_staging_products = PostgresOperator(
         task_id='load_staging_products',
-        postgres_conn_id='postgres_local',
+        postgres_conn_id='airflow_db',
         sql='sql/load_staging_products.sql',
         retries=3,
         retry_delay=timedelta(minutes=5),
