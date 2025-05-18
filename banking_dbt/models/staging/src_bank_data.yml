@@ -1,0 +1,115 @@
+version: 2
+
+sources:
+  - name: bank_data
+    description: "Banking raw data containing customer, transaction, account, and product information"
+    schema: raw
+    tables:
+      - name: customers
+        description: "Raw customer data"
+        columns:
+          - name: cif_id
+            description: "Primary identifier for the customer"
+            tests:
+              - unique
+              - not_null
+
+      - name: transactions
+        description: "Raw banking transaction records"
+        columns:
+          - name: transaction_id
+            description: "Unique identifier for each transaction"
+          - name: transaction_key
+            description: "Transaction key for reference"
+          - name: foracid
+            description: "Account identifier"
+          - name: transaction_amount
+            description: "Amount of the transaction"
+          - name: amount_left
+            description: "Amount left after transaction"
+          - name: p_tran_type
+            description: "Transaction type (C = Credit, D = Debit)"
+          - name: digital_flag
+            description: "Flag indicating if transaction was digital (Y/N)"
+          - name: transaction_channel_type
+            description: "Channel used for transaction (BY_DIGITAL, BY_CARD, BY_BRANCH)"
+          - name: timestamp
+            description: "Timestamp when transaction occurred"
+
+      - name: account
+        description: "Raw account data"
+        columns:
+          - name: acid
+            description: "Unique identifier for the account"
+          - name: foracid
+            description: "Foreign account identifier"
+          - name: cif_id
+            description: "Customer Information File ID"
+          - name: acct_opn_date
+            description: "Date when the account was opened"
+          - name: account_status
+            description: "Status of the account (A=Active, D=Dormant)"
+          - name: lien_amt
+            description: "Lien amount on the account"
+          - name: product_schm_code
+            description: "Product scheme code"
+          - name: schm_type
+            description: "Scheme type (LAA, TDA, ODA, SBA, CAA)"
+          - name: sanct_lim
+            description: "Sanctioned limit"
+          - name: acct_crncy_code
+            description: "Account currency code"
+          - name: del_flg
+            description: "Delete flag (Y/N)"
+          - name: acct_cls_flg
+            description: "Account close flag (Y/N)"
+          - name: drwng_power
+            description: "Drawing power"
+          - name: interest_rate
+            description: "Interest rate"
+          - name: accrued_interest
+            description: "Accrued interest"
+          - name: limit_b2kid
+            description: "Limit B2K ID"
+          - name: clr_bal_amt
+            description: "Clear balance amount"
+
+      - name: cards
+        description: "Raw data containing card information"
+        columns:
+          - name: account_number
+            description: "Primary account identifier"
+          - name: card_number
+            description: "Unique card number"
+          - name: aty_code
+            description: "Card type code (1=Debit, 2=Credit)"
+          - name: card_status
+            description: "Card status flag (Y=Active, N=Inactive)"
+          - name: foracid
+            description: "Foreign account ID reference"
+          - name: car_code
+            description: "Card reference code"
+          - name: product_code
+            description: "Product code describing the card type"
+          - name: acc_paym_mode
+            description: "Account payment mode value"
+          - name: credit_limit
+            description: "Credit limit amount (only for credit cards)"
+          - name: car_create_date
+            description: "Card creation date"
+
+      - name: product
+        description: "Raw data containing products"
+        columns:
+          - name: product_scheme_code
+            description: "Primary key - unique identifier for the product"
+            tests:
+              - unique
+              - not_null
+          - name: product_scheme_type
+            description: "Product type code (SBA, TDA, CAA, etc.)"
+          - name: product_scheme_category
+            description: "Main product category (Deposit, Loan, Card, Digital)"
+          - name: product_scheme_sub_category
+            description: "Subcategory further classifying the product"
+    
