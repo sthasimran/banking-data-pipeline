@@ -36,3 +36,71 @@ connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection re
 ; 4382)
 [2025-05-11T13:48:35.184+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
 [2025-05-11T13:48:35.196+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-19T05:18:42.978+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_staging_dag.create_staging_accounts scheduled__2025-03-28T00:00:00+00:00 [queued]>
+[2025-05-19T05:18:43.000+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_staging_dag.create_staging_accounts scheduled__2025-03-28T00:00:00+00:00 [queued]>
+[2025-05-19T05:18:43.001+0000] {taskinstance.py:2170} INFO - Starting attempt 4 of 4
+[2025-05-19T05:18:43.174+0000] {taskinstance.py:2191} INFO - Executing <Task(PostgresOperator): create_staging_accounts> on 2025-03-28 00:00:00+00:00
+[2025-05-19T05:18:43.183+0000] {standard_task_runner.py:60} INFO - Started process 5595 to run task
+[2025-05-19T05:18:43.186+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'raw_to_staging_dag', 'create_staging_accounts', 'scheduled__2025-03-28T00:00:00+00:00', '--job-id', '1874', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_staging_dag.py', '--cfg-path', '/tmp/tmp1r8qidr_']
+[2025-05-19T05:18:43.191+0000] {standard_task_runner.py:88} INFO - Job 1874: Subtask create_staging_accounts
+[2025-05-19T05:18:43.325+0000] {task_command.py:423} INFO - Running <TaskInstance: raw_to_staging_dag.create_staging_accounts scheduled__2025-03-28T00:00:00+00:00 [running]> on host 98044bf8a4b3
+[2025-05-19T05:18:43.481+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simran' AIRFLOW_CTX_DAG_ID='raw_to_staging_dag' AIRFLOW_CTX_TASK_ID='create_staging_accounts' AIRFLOW_CTX_EXECUTION_DATE='2025-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-28T00:00:00+00:00'
+[2025-05-19T05:18:43.482+0000] {sql.py:276} INFO - Executing: CREATE TABLE IF NOT EXISTS staging.accounts AS
+SELECT * FROM raw.account WHERE 1=0;
+[2025-05-19T05:18:43.501+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-19T05:18:43.513+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-19T05:18:43.530+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py", line 282, in execute
+    output = hook.run(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/hooks/sql.py", line 391, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/mysql/hooks/mysql.py", line 195, in get_conn
+    return MySQLdb.connect(**conn_config)
+  File "/home/airflow/.local/lib/python3.9/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2005, "Unknown server host 'mysql' (-2)")
+[2025-05-19T05:18:43.540+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=raw_to_staging_dag, task_id=create_staging_accounts, execution_date=20250328T000000, start_date=20250519T051842, end_date=20250519T051843
+[2025-05-19T05:18:43.578+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 1874 for task create_staging_accounts ((2005, "Unknown server host 'mysql' (-2)"); 5595)
+[2025-05-19T05:18:43.588+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-05-19T05:18:43.912+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-20T04:12:12.479+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_staging_dag.create_staging_accounts scheduled__2025-03-28T00:00:00+00:00 [queued]>
+[2025-05-20T04:12:12.514+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_staging_dag.create_staging_accounts scheduled__2025-03-28T00:00:00+00:00 [queued]>
+[2025-05-20T04:12:12.518+0000] {taskinstance.py:2170} INFO - Starting attempt 4 of 4
+[2025-05-20T04:12:12.904+0000] {taskinstance.py:2191} INFO - Executing <Task(PostgresOperator): create_staging_accounts> on 2025-03-28 00:00:00+00:00
+[2025-05-20T04:12:12.945+0000] {standard_task_runner.py:60} INFO - Started process 5513 to run task
+[2025-05-20T04:12:12.979+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'raw_to_staging_dag', 'create_staging_accounts', 'scheduled__2025-03-28T00:00:00+00:00', '--job-id', '1891', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_staging_dag.py', '--cfg-path', '/tmp/tmp_t5zq04p']
+[2025-05-20T04:12:13.003+0000] {standard_task_runner.py:88} INFO - Job 1891: Subtask create_staging_accounts
+[2025-05-20T04:12:13.474+0000] {task_command.py:423} INFO - Running <TaskInstance: raw_to_staging_dag.create_staging_accounts scheduled__2025-03-28T00:00:00+00:00 [running]> on host 123cdc80f7f3
+[2025-05-20T04:12:13.782+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simran' AIRFLOW_CTX_DAG_ID='raw_to_staging_dag' AIRFLOW_CTX_TASK_ID='create_staging_accounts' AIRFLOW_CTX_EXECUTION_DATE='2025-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-28T00:00:00+00:00'
+[2025-05-20T04:12:13.785+0000] {sql.py:276} INFO - Executing: CREATE TABLE IF NOT EXISTS staging.accounts AS
+SELECT * FROM raw.account WHERE 1=0;
+[2025-05-20T04:12:13.808+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-20T04:12:13.837+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-20T04:12:13.853+0000] {sql.py:450} INFO - Running statement: CREATE TABLE IF NOT EXISTS staging.accounts AS
+SELECT * FROM raw.account WHERE 1=0;, parameters: None
+[2025-05-20T04:12:13.857+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py", line 282, in execute
+    output = hook.run(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/hooks/sql.py", line 398, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/hooks/sql.py", line 455, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.UndefinedTable: relation "raw.account" does not exist
+LINE 2: SELECT * FROM raw.account WHERE 1=0;
+                      ^
+
+[2025-05-20T04:12:13.876+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=raw_to_staging_dag, task_id=create_staging_accounts, execution_date=20250328T000000, start_date=20250520T041212, end_date=20250520T041213
+[2025-05-20T04:12:13.898+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 1891 for task create_staging_accounts (relation "raw.account" does not exist
+LINE 2: SELECT * FROM raw.account WHERE 1=0;
+                      ^
+; 5513)
+[2025-05-20T04:12:13.929+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-05-20T04:12:14.003+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

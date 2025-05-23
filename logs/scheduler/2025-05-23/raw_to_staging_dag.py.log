@@ -1,0 +1,312 @@
+[2025-05-23T00:17:59.711+0000] {processor.py:161} INFO - Started process (PID=32241) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T00:17:59.716+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T00:17:59.721+0000] {logging_mixin.py:188} INFO - [2025-05-23T00:17:59.720+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T00:17:59.839+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T00:17:59.933+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T00:18:00.159+0000] {logging_mixin.py:188} INFO - [2025-05-23T00:18:00.156+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T00:18:00.254+0000] {logging_mixin.py:188} INFO - [2025-05-23T00:18:00.253+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T00:18:00.316+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.622 seconds
+[2025-05-23T00:50:48.027+0000] {processor.py:161} INFO - Started process (PID=32273) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T00:50:48.029+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T00:50:48.030+0000] {logging_mixin.py:188} INFO - [2025-05-23T00:50:48.030+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T00:50:48.051+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T00:50:48.069+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T00:50:48.121+0000] {logging_mixin.py:188} INFO - [2025-05-23T00:50:48.121+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T00:50:48.160+0000] {logging_mixin.py:188} INFO - [2025-05-23T00:50:48.160+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T00:50:48.185+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.169 seconds
+[2025-05-23T01:12:41.235+0000] {processor.py:161} INFO - Started process (PID=32288) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:12:41.236+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:12:41.238+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:12:41.237+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:12:41.268+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:12:41.296+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:12:41.367+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:12:41.366+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:12:41.441+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:12:41.441+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:12:41.480+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.253 seconds
+[2025-05-23T01:13:11.849+0000] {processor.py:161} INFO - Started process (PID=32303) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:13:11.850+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:13:11.850+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:13:11.850+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:13:11.857+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:13:11.864+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:13:11.876+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:13:11.876+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:13:11.886+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:13:11.886+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:13:11.893+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.047 seconds
+[2025-05-23T01:13:42.404+0000] {processor.py:161} INFO - Started process (PID=32318) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:13:42.404+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:13:42.405+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:13:42.405+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:13:42.416+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:13:42.423+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:13:42.436+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:13:42.436+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:13:42.446+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:13:42.446+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:13:42.453+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.052 seconds
+[2025-05-23T01:14:12.911+0000] {processor.py:161} INFO - Started process (PID=32363) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:14:12.912+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:14:12.912+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:14:12.912+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:14:12.922+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:14:12.929+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:14:12.943+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:14:12.943+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:14:12.957+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:14:12.956+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:14:12.966+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.056 seconds
+[2025-05-23T01:14:43.455+0000] {processor.py:161} INFO - Started process (PID=32378) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:14:43.456+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:14:43.456+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:14:43.456+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:14:43.464+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:14:43.471+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:14:43.482+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:14:43.482+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:14:43.493+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:14:43.493+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:14:43.500+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.046 seconds
+[2025-05-23T01:15:13.949+0000] {processor.py:161} INFO - Started process (PID=32393) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:15:13.949+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:15:13.950+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:15:13.949+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:15:13.957+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:15:13.965+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:15:13.978+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:15:13.978+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:15:13.990+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:15:13.990+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:15:13.997+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.050 seconds
+[2025-05-23T01:15:44.442+0000] {processor.py:161} INFO - Started process (PID=32408) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:15:44.442+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:15:44.443+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:15:44.442+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:15:44.451+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:15:44.458+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:15:44.470+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:15:44.470+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:15:44.485+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:15:44.485+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:15:44.492+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.052 seconds
+[2025-05-23T01:16:14.941+0000] {processor.py:161} INFO - Started process (PID=32423) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:16:14.941+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:16:14.942+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:16:14.941+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:16:14.950+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:16:14.957+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:16:14.969+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:16:14.969+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:16:14.980+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:16:14.980+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:16:14.987+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.048 seconds
+[2025-05-23T01:16:45.473+0000] {processor.py:161} INFO - Started process (PID=32438) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:16:45.474+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:16:45.474+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:16:45.474+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:16:45.484+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:16:45.493+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:16:45.505+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:16:45.505+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:16:45.517+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:16:45.517+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:16:45.524+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.052 seconds
+[2025-05-23T01:26:19.844+0000] {processor.py:161} INFO - Started process (PID=32454) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:26:19.846+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:26:19.846+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:26:19.846+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:26:19.859+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:26:19.867+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:26:19.895+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:26:19.893+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:26:19.915+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:26:19.915+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:26:19.939+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.098 seconds
+[2025-05-23T01:26:50.534+0000] {processor.py:161} INFO - Started process (PID=32482) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:26:50.535+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:26:50.535+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:26:50.535+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:26:50.544+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:26:50.553+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:26:50.565+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:26:50.565+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:26:50.580+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:26:50.580+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:26:50.588+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.057 seconds
+[2025-05-23T01:27:21.132+0000] {processor.py:161} INFO - Started process (PID=32497) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:27:21.133+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:27:21.133+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:27:21.133+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:27:21.144+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:27:21.153+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:27:21.166+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:27:21.166+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:27:21.181+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:27:21.181+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:27:21.188+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.058 seconds
+[2025-05-23T01:27:51.793+0000] {processor.py:161} INFO - Started process (PID=32512) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:27:51.794+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:27:51.794+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:27:51.794+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:27:51.803+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:27:51.809+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:27:51.821+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:27:51.821+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:27:51.834+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:27:51.834+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:27:51.842+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.051 seconds
+[2025-05-23T01:28:22.341+0000] {processor.py:161} INFO - Started process (PID=32527) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:28:22.342+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:28:22.342+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:28:22.342+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:28:22.349+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:28:22.356+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:28:22.370+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:28:22.370+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:28:22.380+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:28:22.380+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:28:22.388+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.048 seconds
+[2025-05-23T01:28:52.975+0000] {processor.py:161} INFO - Started process (PID=32542) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:28:52.975+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:28:52.976+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:28:52.976+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:28:52.985+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:28:52.993+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:28:53.005+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:28:53.004+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:28:53.016+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:28:53.016+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:28:53.023+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.050 seconds
+[2025-05-23T01:29:23.546+0000] {processor.py:161} INFO - Started process (PID=32557) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:29:23.546+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:29:23.546+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:29:23.546+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:29:23.554+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:29:23.561+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:29:23.572+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:29:23.572+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:29:23.588+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:29:23.588+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:29:23.594+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.050 seconds
+[2025-05-23T01:29:54.046+0000] {processor.py:161} INFO - Started process (PID=32572) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:29:54.047+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:29:54.048+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:29:54.047+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:29:54.056+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:29:54.064+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:29:54.075+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:29:54.075+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:29:54.085+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:29:54.085+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:29:54.092+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.047 seconds
+[2025-05-23T01:30:24.586+0000] {processor.py:161} INFO - Started process (PID=32587) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:30:24.587+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:30:24.587+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:30:24.587+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:30:24.595+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:30:24.602+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:30:24.613+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:30:24.613+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:30:24.625+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:30:24.625+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:30:24.631+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.046 seconds
+[2025-05-23T01:30:55.032+0000] {processor.py:161} INFO - Started process (PID=32602) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:30:55.033+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:30:55.033+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:30:55.033+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:30:55.044+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:30:55.051+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:30:55.063+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:30:55.062+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:30:55.073+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:30:55.073+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:30:55.081+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.050 seconds
+[2025-05-23T01:31:25.676+0000] {processor.py:161} INFO - Started process (PID=32617) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:31:25.676+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:31:25.677+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:31:25.677+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:31:25.686+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:31:25.697+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:31:25.710+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:31:25.710+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:31:25.722+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:31:25.722+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:31:25.729+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.055 seconds
+[2025-05-23T01:31:56.194+0000] {processor.py:161} INFO - Started process (PID=32632) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:31:56.194+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:31:56.195+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:31:56.194+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:31:56.202+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:31:56.208+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:31:56.221+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:31:56.221+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:31:56.235+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:31:56.235+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:31:56.242+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.051 seconds
+[2025-05-23T01:32:26.769+0000] {processor.py:161} INFO - Started process (PID=32647) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:32:26.770+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:32:26.771+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:32:26.770+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:32:26.780+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:32:26.787+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:32:26.798+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:32:26.798+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:32:26.808+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:32:26.808+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:32:26.815+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.048 seconds
+[2025-05-23T01:32:57.303+0000] {processor.py:161} INFO - Started process (PID=32662) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:32:57.303+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:32:57.304+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:32:57.303+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:32:57.312+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:32:57.320+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:32:57.332+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:32:57.332+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:32:57.344+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:32:57.344+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:32:57.352+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.051 seconds
+[2025-05-23T01:33:27.846+0000] {processor.py:161} INFO - Started process (PID=32677) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:33:27.847+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:33:27.847+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:33:27.847+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:33:27.855+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:33:27.861+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:33:27.873+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:33:27.873+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:33:27.885+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:33:27.885+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:33:27.893+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.048 seconds
+[2025-05-23T01:33:58.341+0000] {processor.py:161} INFO - Started process (PID=32692) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:33:58.341+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:33:58.341+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:33:58.341+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:33:58.348+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:33:58.355+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:33:58.366+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:33:58.366+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:33:58.377+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:33:58.376+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:33:58.383+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.044 seconds
+[2025-05-23T01:34:28.955+0000] {processor.py:161} INFO - Started process (PID=32707) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:34:28.956+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:34:28.956+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:34:28.956+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:34:28.963+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:34:28.970+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:34:28.981+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:34:28.981+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:34:28.992+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:34:28.992+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:34:28.999+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.046 seconds
+[2025-05-23T01:34:59.490+0000] {processor.py:161} INFO - Started process (PID=32722) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:34:59.491+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:34:59.491+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:34:59.491+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:34:59.499+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:34:59.506+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:34:59.517+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:34:59.517+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:34:59.528+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:34:59.528+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:34:59.535+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.046 seconds
+[2025-05-23T01:35:30.030+0000] {processor.py:161} INFO - Started process (PID=32735) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:35:30.032+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:35:30.032+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:35:30.032+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:35:30.040+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:35:30.048+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:35:30.062+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:35:30.062+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:35:30.077+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:35:30.077+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:35:30.084+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.059 seconds
+[2025-05-23T01:36:00.606+0000] {processor.py:161} INFO - Started process (PID=32782) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:36:00.606+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:36:00.606+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:36:00.606+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:36:00.614+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:36:00.620+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:36:00.632+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:36:00.631+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:36:00.642+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:36:00.642+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:36:00.649+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.045 seconds
+[2025-05-23T01:36:31.102+0000] {processor.py:161} INFO - Started process (PID=32797) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:36:31.103+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:36:31.103+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:36:31.103+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:36:31.111+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:36:31.118+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:36:31.130+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:36:31.130+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:36:31.140+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:36:31.140+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:36:31.147+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.046 seconds
+[2025-05-23T01:37:01.627+0000] {processor.py:161} INFO - Started process (PID=32812) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:37:01.628+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:37:01.628+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:37:01.628+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:37:01.635+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:37:01.643+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:37:01.654+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:37:01.654+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:37:01.666+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:37:01.666+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:37:01.673+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.047 seconds
+[2025-05-23T01:37:32.158+0000] {processor.py:161} INFO - Started process (PID=32827) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:37:32.158+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:37:32.159+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:37:32.159+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:37:32.167+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:37:32.174+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:37:32.185+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:37:32.185+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:37:32.199+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:37:32.199+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:37:32.206+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.051 seconds
+[2025-05-23T01:38:02.690+0000] {processor.py:161} INFO - Started process (PID=32842) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:38:02.691+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:38:02.691+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:38:02.691+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:38:02.699+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:38:02.707+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:38:02.719+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:38:02.719+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:38:02.730+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:38:02.730+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:38:02.737+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.048 seconds
+[2025-05-23T01:38:33.264+0000] {processor.py:161} INFO - Started process (PID=32857) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:38:33.265+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:38:33.265+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:38:33.265+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:38:33.273+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:38:33.279+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:38:33.290+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:38:33.290+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:38:33.301+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:38:33.301+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:38:33.308+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.046 seconds
+[2025-05-23T01:39:03.838+0000] {processor.py:161} INFO - Started process (PID=32872) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:39:03.839+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:39:03.839+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:39:03.839+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:39:03.847+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:39:03.854+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:39:03.865+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:39:03.865+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:39:03.880+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:39:03.880+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:39:03.887+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.051 seconds
+[2025-05-23T01:39:34.351+0000] {processor.py:161} INFO - Started process (PID=32887) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:39:34.352+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:39:34.352+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:39:34.352+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:39:34.360+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:39:34.367+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:39:34.378+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:39:34.378+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:39:34.389+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:39:34.389+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:39:34.396+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.046 seconds
+[2025-05-23T01:40:04.878+0000] {processor.py:161} INFO - Started process (PID=32902) to work on /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:40:04.879+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/raw_to_staging_dag.py for tasks to queue
+[2025-05-23T01:40:04.879+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:40:04.879+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:40:04.887+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py:139 RemovedInAirflow3Warning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2025-05-23T01:40:04.893+0000] {processor.py:840} INFO - DAG(s) 'raw_to_staging_dag' retrieved from /opt/airflow/dags/raw_to_staging_dag.py
+[2025-05-23T01:40:04.904+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:40:04.904+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-23T01:40:04.914+0000] {logging_mixin.py:188} INFO - [2025-05-23T01:40:04.914+0000] {dag.py:3823} INFO - Setting next_dagrun for raw_to_staging_dag to 2025-05-23 00:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-23T01:40:04.921+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/raw_to_staging_dag.py took 0.044 seconds

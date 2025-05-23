@@ -1,0 +1,88 @@
+[0m07:28:25.174876 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1190a5820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119e6b320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119e6b050>]}
+
+
+============================== 07:28:25.177776 | da7d9ac8-4067-4c1d-aa59-5ff091022ad9 ==============================
+[0m07:28:25.177776 [info ] [MainThread]: Running with dbt=1.9.4
+[0m07:28:25.178098 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': '/Users/simranshresha/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt init dbt', 'send_anonymous_usage_stats': 'True'}
+[0m07:28:25.187911 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'PosixPath'.. Dictionary: {'dir': PosixPath('/Users/simranshresha/.dbt')}
+[0m07:28:25.188274 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m07:29:00.748534 [debug] [MainThread]: Starter project path: /opt/anaconda3/lib/python3.12/site-packages/dbt/include/starter_project
+[0m07:29:00.765772 [info ] [MainThread]: 
+Your new dbt project "banking" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m07:29:00.766254 [info ] [MainThread]: Setting up your profile.
+[0m07:31:13.342222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1041da640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105a5f520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105a5f850>]}
+
+
+============================== 07:31:13.346807 | df200c0e-8578-4d29-b4ff-0658f6d3ddd9 ==============================
+[0m07:31:13.346807 [info ] [MainThread]: Running with dbt=1.9.4
+[0m07:31:13.347132 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/Users/simranshresha/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init dbt', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m07:31:57.265226 [debug] [MainThread]: Starter project path: /Users/simranshresha/Desktop/DLytica/banking-data-pipeline/.venv/lib/python3.9/site-packages/dbt/include/starter_project
+[0m07:31:57.280097 [info ] [MainThread]: 
+Your new dbt project "banking_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m07:31:57.280788 [info ] [MainThread]: Setting up your profile.
+[0m07:35:23.298246 [info ] [MainThread]: Profile banking_dbt written to /Users/simranshresha/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m07:35:23.925713 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 250.63033, "process_in_blocks": "0", "process_kernel_time": 0.25119, "process_mem_max_rss": "99516416", "process_out_blocks": "0", "process_user_time": 0.980429}
+[0m07:35:23.928032 [debug] [MainThread]: Command `dbt init` succeeded at 07:35:23.927659 after 250.63 seconds
+[0m07:35:23.929918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1041da640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d28490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ac1670>]}
+[0m07:35:23.931300 [debug] [MainThread]: Flushing usage events
+[0m07:35:25.331632 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:18:52.252078 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104713ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105791fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105791ca0>]}
+
+
+============================== 17:18:52.256876 | d5730ef2-fe75-4392-85e6-ce8cea9f1daa ==============================
+[0m17:18:52.256876 [info ] [MainThread]: Running with dbt=1.9.4
+[0m17:18:52.257256 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/simranshresha/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --select staging', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:18:52.257628 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/simranshresha/Desktop/DLytica/banking-data-pipeline/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:18:52.264705 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.055127915, "process_in_blocks": "0", "process_kernel_time": 0.198709, "process_mem_max_rss": "94945280", "process_out_blocks": "0", "process_user_time": 0.849525}
+[0m17:18:52.265032 [debug] [MainThread]: Command `dbt run` failed at 17:18:52.264972 after 0.06 seconds
+[0m17:18:52.265293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104713ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10575f5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10575f6d0>]}
+[0m17:18:52.265529 [debug] [MainThread]: Flushing usage events
+[0m17:18:53.948191 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:24:00.088446 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1040631f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ec2dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ec2a90>]}
+
+
+============================== 19:24:00.091148 | 5097a0ae-7f9c-4b76-bc7a-82f2a5de3ed1 ==============================
+[0m19:24:00.091148 [info ] [MainThread]: Running with dbt=1.9.4
+[0m19:24:00.091477 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/simranshresha/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt docs generate', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:24:00.091803 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/simranshresha/Desktop/DLytica/banking-data-pipeline/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m19:24:00.093206 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": false, "command_wall_clock_time": 0.042761873, "process_in_blocks": "0", "process_kernel_time": 0.100646, "process_mem_max_rss": "96698368", "process_out_blocks": "0", "process_user_time": 0.606843}
+[0m19:24:00.093510 [debug] [MainThread]: Command `dbt docs generate` failed at 19:24:00.093460 after 0.04 seconds
+[0m19:24:00.093720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1040631f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ec2670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ec2520>]}
+[0m19:24:00.093919 [debug] [MainThread]: Flushing usage events
+[0m19:24:01.110980 [debug] [MainThread]: An error was encountered while trying to flush usage events

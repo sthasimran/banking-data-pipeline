@@ -1,4 +1,4 @@
-TRUNCATE TABLE staging.products;I
+TRUNCATE TABLE staging.products;
 
-NSERT INTO staging.products
+INSERT INTO staging.products
 SELECT * FROM raw.product;

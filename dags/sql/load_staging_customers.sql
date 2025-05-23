@@ -1,4 +1,4 @@
-TRUNCATE TABLE staging.customers;I
+TRUNCATE TABLE staging.customers;
 
-NSERT INTO staging.customers
+INSERT INTO staging.customers
 SELECT * FROM raw.customers;

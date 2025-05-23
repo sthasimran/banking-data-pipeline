@@ -48,3 +48,103 @@ SELECT * FROM raw.product WHERE 1=0;, parameters: None
 [2025-05-12T14:28:02.358+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=raw_to_staging_dag, task_id=create_staging_products, execution_date=20250109T000000, start_date=20250512T142801, end_date=20250512T142802
 [2025-05-12T14:28:02.530+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
 [2025-05-12T14:28:02.820+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-19T02:43:57.543+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_staging_dag.create_staging_products scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-05-19T02:43:57.562+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_staging_dag.create_staging_products scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-05-19T02:43:57.563+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-05-19T02:43:57.608+0000] {taskinstance.py:2191} INFO - Executing <Task(PostgresOperator): create_staging_products> on 2025-01-09 00:00:00+00:00
+[2025-05-19T02:43:57.628+0000] {standard_task_runner.py:60} INFO - Started process 417 to run task
+[2025-05-19T02:43:57.651+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'raw_to_staging_dag', 'create_staging_products', 'scheduled__2025-01-09T00:00:00+00:00', '--job-id', '42', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_staging_dag.py', '--cfg-path', '/tmp/tmp2u8w2n46']
+[2025-05-19T02:43:57.660+0000] {standard_task_runner.py:88} INFO - Job 42: Subtask create_staging_products
+[2025-05-19T02:43:57.830+0000] {task_command.py:423} INFO - Running <TaskInstance: raw_to_staging_dag.create_staging_products scheduled__2025-01-09T00:00:00+00:00 [running]> on host 98044bf8a4b3
+[2025-05-19T02:43:57.993+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simran' AIRFLOW_CTX_DAG_ID='raw_to_staging_dag' AIRFLOW_CTX_TASK_ID='create_staging_products' AIRFLOW_CTX_EXECUTION_DATE='2025-01-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-09T00:00:00+00:00'
+[2025-05-19T02:43:57.997+0000] {sql.py:276} INFO - Executing: CREATE TABLE IF NOT EXISTS staging.products AS
+SELECT * FROM raw.product WHERE 1=0;
+[2025-05-19T02:43:58.009+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-19T02:43:58.031+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-19T02:43:58.058+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py", line 282, in execute
+    output = hook.run(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/hooks/sql.py", line 391, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/mysql/hooks/mysql.py", line 195, in get_conn
+    return MySQLdb.connect(**conn_config)
+  File "/home/airflow/.local/lib/python3.9/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2005, "Unknown server host 'mysql' (-2)")
+[2025-05-19T02:43:58.084+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=raw_to_staging_dag, task_id=create_staging_products, execution_date=20250109T000000, start_date=20250519T024357, end_date=20250519T024358
+[2025-05-19T02:43:58.116+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 42 for task create_staging_products ((2005, "Unknown server host 'mysql' (-2)"); 417)
+[2025-05-19T02:43:58.149+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-05-19T02:43:58.416+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-20T01:12:26.475+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_staging_dag.create_staging_products scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-05-20T01:12:26.542+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_staging_dag.create_staging_products scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-05-20T01:12:26.560+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-05-20T01:12:26.913+0000] {taskinstance.py:2191} INFO - Executing <Task(PostgresOperator): create_staging_products> on 2025-01-09 00:00:00+00:00
+[2025-05-20T01:12:26.966+0000] {standard_task_runner.py:60} INFO - Started process 300 to run task
+[2025-05-20T01:12:27.037+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'raw_to_staging_dag', 'create_staging_products', 'scheduled__2025-01-09T00:00:00+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_staging_dag.py', '--cfg-path', '/tmp/tmpozs8dm29']
+[2025-05-20T01:12:27.088+0000] {standard_task_runner.py:88} INFO - Job 39: Subtask create_staging_products
+[2025-05-20T01:12:27.348+0000] {task_command.py:423} INFO - Running <TaskInstance: raw_to_staging_dag.create_staging_products scheduled__2025-01-09T00:00:00+00:00 [running]> on host 123cdc80f7f3
+[2025-05-20T01:12:27.707+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simran' AIRFLOW_CTX_DAG_ID='raw_to_staging_dag' AIRFLOW_CTX_TASK_ID='create_staging_products' AIRFLOW_CTX_EXECUTION_DATE='2025-01-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-09T00:00:00+00:00'
+[2025-05-20T01:12:27.727+0000] {sql.py:276} INFO - Executing: CREATE TABLE IF NOT EXISTS staging.products AS
+SELECT * FROM raw.product WHERE 1=0;
+[2025-05-20T01:12:27.772+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-20T01:12:27.813+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-20T01:12:27.843+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py", line 282, in execute
+    output = hook.run(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/hooks/sql.py", line 391, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/mysql/hooks/mysql.py", line 195, in get_conn
+    return MySQLdb.connect(**conn_config)
+  File "/home/airflow/.local/lib/python3.9/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2005, "Unknown server host 'mysql' (-2)")
+[2025-05-20T01:12:27.876+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=raw_to_staging_dag, task_id=create_staging_products, execution_date=20250109T000000, start_date=20250520T011226, end_date=20250520T011227
+[2025-05-20T01:12:27.932+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 39 for task create_staging_products ((2005, "Unknown server host 'mysql' (-2)"); 300)
+[2025-05-20T01:12:27.977+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-05-20T01:12:28.395+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-20T13:33:12.134+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_staging_dag.create_staging_products scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-05-20T13:33:12.152+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_staging_dag.create_staging_products scheduled__2025-01-09T00:00:00+00:00 [queued]>
+[2025-05-20T13:33:12.157+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-05-20T13:33:12.294+0000] {taskinstance.py:2191} INFO - Executing <Task(PostgresOperator): create_staging_products> on 2025-01-09 00:00:00+00:00
+[2025-05-20T13:33:12.326+0000] {standard_task_runner.py:60} INFO - Started process 14083 to run task
+[2025-05-20T13:33:12.402+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'raw_to_staging_dag', 'create_staging_products', 'scheduled__2025-01-09T00:00:00+00:00', '--job-id', '2849', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_staging_dag.py', '--cfg-path', '/tmp/tmpgziiimue']
+[2025-05-20T13:33:12.410+0000] {standard_task_runner.py:88} INFO - Job 2849: Subtask create_staging_products
+[2025-05-20T13:33:12.919+0000] {task_command.py:423} INFO - Running <TaskInstance: raw_to_staging_dag.create_staging_products scheduled__2025-01-09T00:00:00+00:00 [running]> on host 123cdc80f7f3
+[2025-05-20T13:33:13.330+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simran' AIRFLOW_CTX_DAG_ID='raw_to_staging_dag' AIRFLOW_CTX_TASK_ID='create_staging_products' AIRFLOW_CTX_EXECUTION_DATE='2025-01-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-09T00:00:00+00:00'
+[2025-05-20T13:33:13.337+0000] {sql.py:276} INFO - Executing: CREATE TABLE IF NOT EXISTS staging.products AS
+SELECT * FROM raw.product WHERE 1=0;
+[2025-05-20T13:33:13.379+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-20T13:33:13.591+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-20T13:33:13.674+0000] {sql.py:450} INFO - Running statement: CREATE TABLE IF NOT EXISTS staging.products AS
+SELECT * FROM raw.product WHERE 1=0;, parameters: None
+[2025-05-20T13:33:13.693+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py", line 282, in execute
+    output = hook.run(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/hooks/sql.py", line 398, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/hooks/sql.py", line 455, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.UndefinedTable: relation "raw.product" does not exist
+LINE 2: SELECT * FROM raw.product WHERE 1=0;
+                      ^
+
+[2025-05-20T13:33:13.761+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=raw_to_staging_dag, task_id=create_staging_products, execution_date=20250109T000000, start_date=20250520T133312, end_date=20250520T133313
+[2025-05-20T13:33:13.816+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 2849 for task create_staging_products (relation "raw.product" does not exist
+LINE 2: SELECT * FROM raw.product WHERE 1=0;
+                      ^
+; 14083)
+[2025-05-20T13:33:13.978+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-05-20T13:33:16.862+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

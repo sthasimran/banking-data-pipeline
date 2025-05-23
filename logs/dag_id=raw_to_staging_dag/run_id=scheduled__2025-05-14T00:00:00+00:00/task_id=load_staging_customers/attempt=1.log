@@ -1,0 +1,63 @@
+[2025-05-15T00:26:34.365+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_staging_dag.load_staging_customers scheduled__2025-05-14T00:00:00+00:00 [queued]>
+[2025-05-15T00:26:34.373+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_staging_dag.load_staging_customers scheduled__2025-05-14T00:00:00+00:00 [queued]>
+[2025-05-15T00:26:34.373+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-05-15T00:26:34.395+0000] {taskinstance.py:2191} INFO - Executing <Task(PostgresOperator): load_staging_customers> on 2025-05-14 00:00:00+00:00
+[2025-05-15T00:26:34.399+0000] {standard_task_runner.py:60} INFO - Started process 12099 to run task
+[2025-05-15T00:26:34.403+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'raw_to_staging_dag', 'load_staging_customers', 'scheduled__2025-05-14T00:00:00+00:00', '--job-id', '4056', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_staging_dag.py', '--cfg-path', '/tmp/tmpxt5nitsy']
+[2025-05-15T00:26:34.406+0000] {standard_task_runner.py:88} INFO - Job 4056: Subtask load_staging_customers
+[2025-05-15T00:26:34.452+0000] {task_command.py:423} INFO - Running <TaskInstance: raw_to_staging_dag.load_staging_customers scheduled__2025-05-14T00:00:00+00:00 [running]> on host 03858235192c
+[2025-05-15T00:26:34.526+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simran' AIRFLOW_CTX_DAG_ID='raw_to_staging_dag' AIRFLOW_CTX_TASK_ID='load_staging_customers' AIRFLOW_CTX_EXECUTION_DATE='2025-05-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-14T00:00:00+00:00'
+[2025-05-15T00:26:34.527+0000] {sql.py:276} INFO - Executing: TRUNCATE TABLE staging.customers;I
+
+NSERT INTO staging.customers
+SELECT * FROM raw.customers;
+[2025-05-15T00:26:34.538+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-15T00:26:34.547+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-15T00:26:34.556+0000] {sql.py:450} INFO - Running statement: TRUNCATE TABLE staging.customers;I
+
+NSERT INTO staging.customers
+SELECT * FROM raw.customers;, parameters: None
+[2025-05-15T00:26:34.558+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/operators/sql.py", line 282, in execute
+    output = hook.run(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 398, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 455, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.SyntaxError: syntax error at or near "I"
+LINE 1: TRUNCATE TABLE staging.customers;I
+                                         ^
+
+[2025-05-15T00:26:34.562+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=raw_to_staging_dag, task_id=load_staging_customers, execution_date=20250514T000000, start_date=20250515T002634, end_date=20250515T002634
+[2025-05-15T00:26:34.571+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 4056 for task load_staging_customers (syntax error at or near "I"
+LINE 1: TRUNCATE TABLE staging.customers;I
+                                         ^
+; 12099)
+[2025-05-15T00:26:34.583+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-05-15T00:26:34.591+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-22T02:23:47.710+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_staging_dag.load_staging_customers scheduled__2025-05-14T00:00:00+00:00 [queued]>
+[2025-05-22T02:23:47.733+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_staging_dag.load_staging_customers scheduled__2025-05-14T00:00:00+00:00 [queued]>
+[2025-05-22T02:23:47.734+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-05-22T02:23:47.855+0000] {taskinstance.py:2191} INFO - Executing <Task(PostgresOperator): load_staging_customers> on 2025-05-14 00:00:00+00:00
+[2025-05-22T02:23:47.868+0000] {standard_task_runner.py:60} INFO - Started process 28744 to run task
+[2025-05-22T02:23:47.876+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'raw_to_staging_dag', 'load_staging_customers', 'scheduled__2025-05-14T00:00:00+00:00', '--job-id', '3987', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_staging_dag.py', '--cfg-path', '/tmp/tmprg80wciz']
+[2025-05-22T02:23:47.893+0000] {standard_task_runner.py:88} INFO - Job 3987: Subtask load_staging_customers
+[2025-05-22T02:23:48.043+0000] {task_command.py:423} INFO - Running <TaskInstance: raw_to_staging_dag.load_staging_customers scheduled__2025-05-14T00:00:00+00:00 [running]> on host 123cdc80f7f3
+[2025-05-22T02:23:48.204+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simran' AIRFLOW_CTX_DAG_ID='raw_to_staging_dag' AIRFLOW_CTX_TASK_ID='load_staging_customers' AIRFLOW_CTX_EXECUTION_DATE='2025-05-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-14T00:00:00+00:00'
+[2025-05-22T02:23:48.207+0000] {sql.py:276} INFO - Executing: TRUNCATE TABLE staging.customers;
+
+INSERT INTO staging.customers
+SELECT * FROM raw.customers;
+[2025-05-22T02:23:48.242+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-22T02:23:48.316+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-22T02:23:48.414+0000] {sql.py:450} INFO - Running statement: TRUNCATE TABLE staging.customers;
+
+INSERT INTO staging.customers
+SELECT * FROM raw.customers;, parameters: None
+[2025-05-22T02:23:48.453+0000] {sql.py:459} INFO - Rows affected: 0
+[2025-05-22T02:23:48.496+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=raw_to_staging_dag, task_id=load_staging_customers, execution_date=20250514T000000, start_date=20250522T022347, end_date=20250522T022348
+[2025-05-22T02:23:48.632+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-05-22T02:23:48.680+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

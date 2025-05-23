@@ -1,0 +1,88 @@
+[2025-05-20T01:14:23.100+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_dbt_models_after_ingestion.run_dbt_models manual__2025-05-20T01:14:22.136700+00:00 [queued]>
+[2025-05-20T01:14:23.104+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_dbt_models_after_ingestion.run_dbt_models manual__2025-05-20T01:14:22.136700+00:00 [queued]>
+[2025-05-20T01:14:23.104+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-05-20T01:14:23.109+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): run_dbt_models> on 2025-05-20 01:14:22.136700+00:00
+[2025-05-20T01:14:23.112+0000] {standard_task_runner.py:60} INFO - Started process 415 to run task
+[2025-05-20T01:14:23.117+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'run_dbt_models_after_ingestion', 'run_dbt_models', 'manual__2025-05-20T01:14:22.136700+00:00', '--job-id', '82', '--raw', '--subdir', 'DAGS_FOLDER/dbt_model_dag.py', '--cfg-path', '/tmp/tmpsfpw3qfb']
+[2025-05-20T01:14:23.120+0000] {standard_task_runner.py:88} INFO - Job 82: Subtask run_dbt_models
+[2025-05-20T01:14:23.151+0000] {task_command.py:423} INFO - Running <TaskInstance: run_dbt_models_after_ingestion.run_dbt_models manual__2025-05-20T01:14:22.136700+00:00 [running]> on host 123cdc80f7f3
+[2025-05-20T01:14:23.193+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simran' AIRFLOW_CTX_DAG_ID='run_dbt_models_after_ingestion' AIRFLOW_CTX_TASK_ID='run_dbt_models' AIRFLOW_CTX_EXECUTION_DATE='2025-05-20T01:14:22.136700+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-20T01:14:22.136700+00:00'
+[2025-05-20T01:14:23.194+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-20T01:14:23.198+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/airflow/dbt && dbt run --profiles-dir .']
+[2025-05-20T01:14:23.205+0000] {subprocess.py:86} INFO - Output:
+[2025-05-20T01:14:24.330+0000] {subprocess.py:93} INFO - [0m01:14:24  Running with dbt=1.9.4
+[2025-05-20T01:14:24.507+0000] {subprocess.py:93} INFO - [0m01:14:24  Registered adapter: postgres=1.9.0
+[2025-05-20T01:14:24.798+0000] {subprocess.py:93} INFO - [0m01:14:24  Found 15 models, 8 data tests, 5 sources, 433 macros
+[2025-05-20T01:14:24.800+0000] {subprocess.py:93} INFO - [0m01:14:24
+[2025-05-20T01:14:24.801+0000] {subprocess.py:93} INFO - [0m01:14:24  Concurrency: 4 threads (target='dev')
+[2025-05-20T01:14:24.801+0000] {subprocess.py:93} INFO - [0m01:14:24
+[2025-05-20T01:14:24.914+0000] {subprocess.py:93} INFO - [0m01:14:24  1 of 15 START sql table model core.my_first_dbt_model .......................... [RUN]
+[2025-05-20T01:14:24.915+0000] {subprocess.py:93} INFO - [0m01:14:24  2 of 15 START sql view model core_staging.stg_accounts ......................... [RUN]
+[2025-05-20T01:14:24.915+0000] {subprocess.py:93} INFO - [0m01:14:24  3 of 15 START sql view model core_staging.stg_cards ............................ [RUN]
+[2025-05-20T01:14:24.916+0000] {subprocess.py:93} INFO - [0m01:14:24  4 of 15 START sql view model core_staging.stg_customers ........................ [RUN]
+[2025-05-20T01:14:25.021+0000] {subprocess.py:93} INFO - [0m01:14:25  3 of 15 ERROR creating sql view model core_staging.stg_cards ................... [[31mERROR[0m in 0.10s]
+[2025-05-20T01:14:25.022+0000] {subprocess.py:93} INFO - [0m01:14:25  4 of 15 ERROR creating sql view model core_staging.stg_customers ............... [[31mERROR[0m in 0.10s]
+[2025-05-20T01:14:25.022+0000] {subprocess.py:93} INFO - [0m01:14:25  2 of 15 ERROR creating sql view model core_staging.stg_accounts ................ [[31mERROR[0m in 0.10s]
+[2025-05-20T01:14:25.028+0000] {subprocess.py:93} INFO - [0m01:14:25  5 of 15 START sql view model core_staging.stg_products ......................... [RUN]
+[2025-05-20T01:14:25.029+0000] {subprocess.py:93} INFO - [0m01:14:25  6 of 15 START sql view model core_staging.stg_transactions ..................... [RUN]
+[2025-05-20T01:14:25.032+0000] {subprocess.py:93} INFO - [0m01:14:25  7 of 15 SKIP relation core.dim_cards ........................................... [[33mSKIP[0m]
+[2025-05-20T01:14:25.034+0000] {subprocess.py:93} INFO - [0m01:14:25  1 of 15 OK created sql table model core.my_first_dbt_model ..................... [[32mSELECT 2[0m in 0.12s]
+[2025-05-20T01:14:25.040+0000] {subprocess.py:93} INFO - [0m01:14:25  8 of 15 SKIP relation core.dim_customers ....................................... [[33mSKIP[0m]
+[2025-05-20T01:14:25.044+0000] {subprocess.py:93} INFO - [0m01:14:25  9 of 15 START sql view model core.my_second_dbt_model .......................... [RUN]
+[2025-05-20T01:14:25.065+0000] {subprocess.py:93} INFO - [0m01:14:25  5 of 15 ERROR creating sql view model core_staging.stg_products ................ [[31mERROR[0m in 0.03s]
+[2025-05-20T01:14:25.066+0000] {subprocess.py:93} INFO - [0m01:14:25  6 of 15 ERROR creating sql view model core_staging.stg_transactions ............ [[31mERROR[0m in 0.03s]
+[2025-05-20T01:14:25.069+0000] {subprocess.py:93} INFO - [0m01:14:25  10 of 15 SKIP relation core.dim_products ....................................... [[33mSKIP[0m]
+[2025-05-20T01:14:25.070+0000] {subprocess.py:93} INFO - [0m01:14:25  11 of 15 SKIP relation core.account-summary .................................... [[33mSKIP[0m]
+[2025-05-20T01:14:25.072+0000] {subprocess.py:93} INFO - [0m01:14:25  12 of 15 SKIP relation core.card_usage_summary ................................. [[33mSKIP[0m]
+[2025-05-20T01:14:25.075+0000] {subprocess.py:93} INFO - [0m01:14:25  13 of 15 SKIP relation core.customer_trans ..................................... [[33mSKIP[0m]
+[2025-05-20T01:14:25.075+0000] {subprocess.py:93} INFO - [0m01:14:25  14 of 15 SKIP relation core.product_summary .................................... [[33mSKIP[0m]
+[2025-05-20T01:14:25.076+0000] {subprocess.py:93} INFO - [0m01:14:25  15 of 15 SKIP relation core.fact_transaction ................................... [[33mSKIP[0m]
+[2025-05-20T01:14:25.084+0000] {subprocess.py:93} INFO - [0m01:14:25  9 of 15 OK created sql view model core.my_second_dbt_model ..................... [[32mCREATE VIEW[0m in 0.04s]
+[2025-05-20T01:14:25.090+0000] {subprocess.py:93} INFO - [0m01:14:25
+[2025-05-20T01:14:25.091+0000] {subprocess.py:93} INFO - [0m01:14:25  Finished running 9 table models, 6 view models in 0 hours 0 minutes and 0.29 seconds (0.29s).
+[2025-05-20T01:14:25.122+0000] {subprocess.py:93} INFO - [0m01:14:25
+[2025-05-20T01:14:25.122+0000] {subprocess.py:93} INFO - [0m01:14:25  [31mCompleted with 5 errors, 0 partial successes, and 0 warnings:[0m
+[2025-05-20T01:14:25.123+0000] {subprocess.py:93} INFO - [0m01:14:25
+[2025-05-20T01:14:25.123+0000] {subprocess.py:93} INFO - [0m01:14:25    Database Error in model stg_cards (models/staging/stg_cards.sql)
+[2025-05-20T01:14:25.123+0000] {subprocess.py:93} INFO -   relation "raw.cards" does not exist
+[2025-05-20T01:14:25.123+0000] {subprocess.py:93} INFO -   LINE 10:     select * from "banking"."raw"."cards"
+[2025-05-20T01:14:25.123+0000] {subprocess.py:93} INFO -                              ^
+[2025-05-20T01:14:25.123+0000] {subprocess.py:93} INFO -   compiled code at target/run/banking_dbt/models/staging/stg_cards.sql
+[2025-05-20T01:14:25.123+0000] {subprocess.py:93} INFO - [0m01:14:25
+[2025-05-20T01:14:25.124+0000] {subprocess.py:93} INFO - [0m01:14:25    Database Error in model stg_customers (models/staging/stg_customers.sql)
+[2025-05-20T01:14:25.124+0000] {subprocess.py:93} INFO -   relation "raw.customers" does not exist
+[2025-05-20T01:14:25.124+0000] {subprocess.py:93} INFO -   LINE 10:     select * from "banking"."raw"."customers"
+[2025-05-20T01:14:25.124+0000] {subprocess.py:93} INFO -                              ^
+[2025-05-20T01:14:25.124+0000] {subprocess.py:93} INFO -   compiled code at target/run/banking_dbt/models/staging/stg_customers.sql
+[2025-05-20T01:14:25.124+0000] {subprocess.py:93} INFO - [0m01:14:25
+[2025-05-20T01:14:25.124+0000] {subprocess.py:93} INFO - [0m01:14:25    Database Error in model stg_accounts (models/staging/stg_accounts.sql)
+[2025-05-20T01:14:25.124+0000] {subprocess.py:93} INFO -   relation "raw.account" does not exist
+[2025-05-20T01:14:25.124+0000] {subprocess.py:93} INFO -   LINE 10:     select * from "banking"."raw"."account"
+[2025-05-20T01:14:25.124+0000] {subprocess.py:93} INFO -                              ^
+[2025-05-20T01:14:25.124+0000] {subprocess.py:93} INFO -   compiled code at target/run/banking_dbt/models/staging/stg_accounts.sql
+[2025-05-20T01:14:25.124+0000] {subprocess.py:93} INFO - [0m01:14:25
+[2025-05-20T01:14:25.125+0000] {subprocess.py:93} INFO - [0m01:14:25    Database Error in model stg_products (models/staging/stg_products.sql)
+[2025-05-20T01:14:25.125+0000] {subprocess.py:93} INFO -   relation "raw.product" does not exist
+[2025-05-20T01:14:25.125+0000] {subprocess.py:93} INFO -   LINE 10:     select * from "banking"."raw"."product"
+[2025-05-20T01:14:25.125+0000] {subprocess.py:93} INFO -                              ^
+[2025-05-20T01:14:25.125+0000] {subprocess.py:93} INFO -   compiled code at target/run/banking_dbt/models/staging/stg_products.sql
+[2025-05-20T01:14:25.125+0000] {subprocess.py:93} INFO - [0m01:14:25
+[2025-05-20T01:14:25.125+0000] {subprocess.py:93} INFO - [0m01:14:25    Database Error in model stg_transactions (models/staging/stg_transactions.sql)
+[2025-05-20T01:14:25.125+0000] {subprocess.py:93} INFO -   relation "raw.transactions" does not exist
+[2025-05-20T01:14:25.125+0000] {subprocess.py:93} INFO -   LINE 10:     select * from "banking"."raw"."transactions"
+[2025-05-20T01:14:25.125+0000] {subprocess.py:93} INFO -                              ^
+[2025-05-20T01:14:25.126+0000] {subprocess.py:93} INFO -   compiled code at target/run/banking_dbt/models/staging/stg_transactions.sql
+[2025-05-20T01:14:25.126+0000] {subprocess.py:93} INFO - [0m01:14:25
+[2025-05-20T01:14:25.126+0000] {subprocess.py:93} INFO - [0m01:14:25  Done. PASS=2 WARN=0 ERROR=5 SKIP=8 TOTAL=15
+[2025-05-20T01:14:27.089+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-05-20T01:14:27.112+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-05-20T01:14:27.119+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=run_dbt_models_after_ingestion, task_id=run_dbt_models, execution_date=20250520T011422, start_date=20250520T011423, end_date=20250520T011427
+[2025-05-20T01:14:27.132+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 82 for task run_dbt_models (Bash command failed. The command returned a non-zero exit code 1.; 415)
+[2025-05-20T01:14:27.153+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-05-20T01:14:27.180+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

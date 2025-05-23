@@ -17,3 +17,26 @@ SELECT * FROM raw.account;, parameters: None
 [2025-05-12T14:29:38.615+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=raw_to_staging_dag, task_id=load_staging_accounts, execution_date=20250214T000000, start_date=20250512T142937, end_date=20250512T142938
 [2025-05-12T14:29:38.665+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
 [2025-05-12T14:29:38.828+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-22T02:23:10.996+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_staging_dag.load_staging_accounts scheduled__2025-02-14T00:00:00+00:00 [queued]>
+[2025-05-22T02:23:11.017+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_staging_dag.load_staging_accounts scheduled__2025-02-14T00:00:00+00:00 [queued]>
+[2025-05-22T02:23:11.017+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-05-22T02:23:11.051+0000] {taskinstance.py:2191} INFO - Executing <Task(PostgresOperator): load_staging_accounts> on 2025-02-14 00:00:00+00:00
+[2025-05-22T02:23:11.055+0000] {standard_task_runner.py:60} INFO - Started process 28397 to run task
+[2025-05-22T02:23:11.064+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'raw_to_staging_dag', 'load_staging_accounts', 'scheduled__2025-02-14T00:00:00+00:00', '--job-id', '3825', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_staging_dag.py', '--cfg-path', '/tmp/tmp13k797oh']
+[2025-05-22T02:23:11.071+0000] {standard_task_runner.py:88} INFO - Job 3825: Subtask load_staging_accounts
+[2025-05-22T02:23:11.203+0000] {task_command.py:423} INFO - Running <TaskInstance: raw_to_staging_dag.load_staging_accounts scheduled__2025-02-14T00:00:00+00:00 [running]> on host 123cdc80f7f3
+[2025-05-22T02:23:11.301+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simran' AIRFLOW_CTX_DAG_ID='raw_to_staging_dag' AIRFLOW_CTX_TASK_ID='load_staging_accounts' AIRFLOW_CTX_EXECUTION_DATE='2025-02-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-14T00:00:00+00:00'
+[2025-05-22T02:23:11.305+0000] {sql.py:276} INFO - Executing: TRUNCATE TABLE staging.accounts;
+
+INSERT INTO staging.accounts
+SELECT * FROM raw.account;
+[2025-05-22T02:23:11.356+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-22T02:23:11.386+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-22T02:23:11.411+0000] {sql.py:450} INFO - Running statement: TRUNCATE TABLE staging.accounts;
+
+INSERT INTO staging.accounts
+SELECT * FROM raw.account;, parameters: None
+[2025-05-22T02:23:11.415+0000] {sql.py:459} INFO - Rows affected: 0
+[2025-05-22T02:23:11.438+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=raw_to_staging_dag, task_id=load_staging_accounts, execution_date=20250214T000000, start_date=20250522T022310, end_date=20250522T022311
+[2025-05-22T02:23:11.666+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-05-22T02:23:11.810+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

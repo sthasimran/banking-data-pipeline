@@ -8,11 +8,6 @@ x-airflow-common:
     - AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION=True
     - AIRFLOW__CORE__LOAD_EXAMPLES=False
     - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=${AIRFLOW_DB_CONN}
-
-  volumes:
-    - ../dags:/opt/airflow/dags
-    - ../logs:/opt/airflow/logs
-    - ../plugins:/opt/airflow/plugins
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     - postgres
@@ -26,13 +21,38 @@ services:
       POSTGRES_DB: banking
     ports:
       - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
 
   airflow-webserver:
     <<: *airflow-common
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: custom-airflow-dbt
     ports:
       - "8081:8080"
     command: webserver
+    volumes:
+      - ../dags:/opt/airflow/dags
+      - ../logs:/opt/airflow/logs
+      - ../plugins:/opt/airflow/plugins
+      - ../banking_dbt:/opt/airflow/dbt
+      - ../data:/opt/airflow/data         
 
   airflow-scheduler:
     <<: *airflow-common
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: custom-airflow-dbt
     command: scheduler
+    volumes:
+      - ../dags:/opt/airflow/dags
+      - ../logs:/opt/airflow/logs
+      - ../plugins:/opt/airflow/plugins
+      - ../banking_dbt:/opt/airflow/dbt
+      - ../data:/opt/airflow/data         
+
+volumes:
+  postgres_data:

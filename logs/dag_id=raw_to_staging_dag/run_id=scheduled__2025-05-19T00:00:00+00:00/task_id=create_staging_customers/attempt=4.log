@@ -1,0 +1,54 @@
+[2025-05-20T00:15:04.364+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_staging_dag.create_staging_customers scheduled__2025-05-19T00:00:00+00:00 [queued]>
+[2025-05-20T00:15:04.377+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_staging_dag.create_staging_customers scheduled__2025-05-19T00:00:00+00:00 [queued]>
+[2025-05-20T00:15:04.379+0000] {taskinstance.py:2170} INFO - Starting attempt 4 of 4
+[2025-05-20T00:15:04.412+0000] {taskinstance.py:2191} INFO - Executing <Task(PostgresOperator): create_staging_customers> on 2025-05-19 00:00:00+00:00
+[2025-05-20T00:15:04.426+0000] {standard_task_runner.py:60} INFO - Started process 16920 to run task
+[2025-05-20T00:15:04.439+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'raw_to_staging_dag', 'create_staging_customers', 'scheduled__2025-05-19T00:00:00+00:00', '--job-id', '2800', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_staging_dag.py', '--cfg-path', '/tmp/tmpibndmvra']
+[2025-05-20T00:15:04.444+0000] {standard_task_runner.py:88} INFO - Job 2800: Subtask create_staging_customers
+[2025-05-20T00:15:04.533+0000] {task_command.py:423} INFO - Running <TaskInstance: raw_to_staging_dag.create_staging_customers scheduled__2025-05-19T00:00:00+00:00 [running]> on host 98044bf8a4b3
+[2025-05-20T00:15:04.659+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simran' AIRFLOW_CTX_DAG_ID='raw_to_staging_dag' AIRFLOW_CTX_TASK_ID='create_staging_customers' AIRFLOW_CTX_EXECUTION_DATE='2025-05-19T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-19T00:00:00+00:00'
+[2025-05-20T00:15:04.660+0000] {sql.py:276} INFO - Executing: CREATE TABLE IF NOT EXISTS staging.customers AS
+SELECT * FROM raw.customers WHERE 1=0;
+[2025-05-20T00:15:04.692+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-20T00:15:04.728+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-20T00:15:04.773+0000] {sql.py:450} INFO - Running statement: CREATE TABLE IF NOT EXISTS staging.customers AS
+SELECT * FROM raw.customers WHERE 1=0;, parameters: None
+[2025-05-20T00:15:04.796+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=raw_to_staging_dag, task_id=create_staging_customers, execution_date=20250519T000000, start_date=20250520T001504, end_date=20250520T001504
+[2025-05-20T00:15:04.820+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-05-20T00:15:04.834+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-20T04:58:43.982+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_staging_dag.create_staging_customers scheduled__2025-05-19T00:00:00+00:00 [queued]>
+[2025-05-20T04:58:43.986+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_staging_dag.create_staging_customers scheduled__2025-05-19T00:00:00+00:00 [queued]>
+[2025-05-20T04:58:43.987+0000] {taskinstance.py:2170} INFO - Starting attempt 4 of 4
+[2025-05-20T04:58:43.992+0000] {taskinstance.py:2191} INFO - Executing <Task(PostgresOperator): create_staging_customers> on 2025-05-19 00:00:00+00:00
+[2025-05-20T04:58:43.997+0000] {standard_task_runner.py:60} INFO - Started process 8249 to run task
+[2025-05-20T04:58:43.998+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'raw_to_staging_dag', 'create_staging_customers', 'scheduled__2025-05-19T00:00:00+00:00', '--job-id', '2803', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_staging_dag.py', '--cfg-path', '/tmp/tmp4ux_k7ct']
+[2025-05-20T04:58:43.999+0000] {standard_task_runner.py:88} INFO - Job 2803: Subtask create_staging_customers
+[2025-05-20T04:58:44.019+0000] {task_command.py:423} INFO - Running <TaskInstance: raw_to_staging_dag.create_staging_customers scheduled__2025-05-19T00:00:00+00:00 [running]> on host 123cdc80f7f3
+[2025-05-20T04:58:44.046+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simran' AIRFLOW_CTX_DAG_ID='raw_to_staging_dag' AIRFLOW_CTX_TASK_ID='create_staging_customers' AIRFLOW_CTX_EXECUTION_DATE='2025-05-19T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-19T00:00:00+00:00'
+[2025-05-20T04:58:44.047+0000] {sql.py:276} INFO - Executing: CREATE TABLE IF NOT EXISTS staging.customers AS
+SELECT * FROM raw.customers WHERE 1=0;
+[2025-05-20T04:58:44.052+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-20T04:58:44.056+0000] {base.py:83} INFO - Using connection ID 'airflow_db' for task execution.
+[2025-05-20T04:58:44.061+0000] {sql.py:450} INFO - Running statement: CREATE TABLE IF NOT EXISTS staging.customers AS
+SELECT * FROM raw.customers WHERE 1=0;, parameters: None
+[2025-05-20T04:58:44.062+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/operators/sql.py", line 282, in execute
+    output = hook.run(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/hooks/sql.py", line 398, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/common/sql/hooks/sql.py", line 455, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.UndefinedTable: relation "raw.customers" does not exist
+LINE 2: SELECT * FROM raw.customers WHERE 1=0;
+                      ^
+
+[2025-05-20T04:58:44.065+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=raw_to_staging_dag, task_id=create_staging_customers, execution_date=20250519T000000, start_date=20250520T045843, end_date=20250520T045844
+[2025-05-20T04:58:44.069+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 2803 for task create_staging_customers (relation "raw.customers" does not exist
+LINE 2: SELECT * FROM raw.customers WHERE 1=0;
+                      ^
+; 8249)
+[2025-05-20T04:58:44.098+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-05-20T04:58:44.107+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
