@@ -1,13 +1,22 @@
-
 x-airflow-common:
   &airflow-common
-  image: apache/airflow:2.8.1
+  image: custom-airflow-dbt
+  build:
+    context: ..
+    dockerfile: docker/Dockerfile
   environment:
     - AIRFLOW__CORE__EXECUTOR=LocalExecutor
     - AIRFLOW__CORE__FERNET_KEY=${FERNET_KEY}
     - AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION=True
     - AIRFLOW__CORE__LOAD_EXAMPLES=False
     - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=${AIRFLOW_DB_CONN}
+    - AIRFLOW__SMTP__SMTP_HOST=smtp.gmail.com
+    - AIRFLOW__SMTP__SMTP_STARTTLS=True
+    - AIRFLOW__SMTP__SMTP_SSL=False
+    - AIRFLOW__SMTP__SMTP_USER=sthasimran2000@gmail.com
+    - AIRFLOW__SMTP__SMTP_PASSWORD=vqrixscxxrnyxvjz
+    - AIRFLOW__SMTP__SMTP_PORT=587
+    - AIRFLOW__SMTP__SMTP_MAIL_FROM=sthasimran2000@gmail.com
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     - postgres
@@ -24,12 +33,19 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+  airflow-init:
+    <<: *airflow-common
+    command: db init
+    image: custom-airflow-dbt
+    volumes:
+      - ../dags:/opt/airflow/dags
+      - ../logs:/opt/airflow/logs
+      - ../plugins:/opt/airflow/plugins
+      - ../banking_dbt:/opt/airflow/dbt
+      - ../data:/opt/airflow/data
+
   airflow-webserver:
     <<: *airflow-common
-    build:
-      context: ..
-      dockerfile: docker/Dockerfile
-    image: custom-airflow-dbt
     ports:
       - "8081:8080"
     command: webserver
@@ -38,21 +54,38 @@ services:
       - ../logs:/opt/airflow/logs
       - ../plugins:/opt/airflow/plugins
       - ../banking_dbt:/opt/airflow/dbt
-      - ../data:/opt/airflow/data         
+      - ../data:/opt/airflow/data
 
   airflow-scheduler:
     <<: *airflow-common
-    build:
-      context: ..
-      dockerfile: docker/Dockerfile
-    image: custom-airflow-dbt
     command: scheduler
     volumes:
       - ../dags:/opt/airflow/dags
       - ../logs:/opt/airflow/logs
       - ../plugins:/opt/airflow/plugins
       - ../banking_dbt:/opt/airflow/dbt
-      - ../data:/opt/airflow/data         
+      - ../data:/opt/airflow/data
+
+  superset:
+    build:
+      context: .
+      dockerfile: Dockerfile.superset
+    container_name: superset
+    ports:
+      - "8088:8088"
+    environment:
+      - SUPERSET_LOAD_EXAMPLES=no
+      - SUPERSET_SECRET_KEY=thisISaSECRET_1234
+    volumes:
+      - superset_home:/app/superset_home
+    command: >
+      bash -c "
+        superset db upgrade &&
+        superset fab create-admin --username simran --firstname Simran --lastname Shrestha --email sthasimran2000@gmail.com --password admin123 &&
+        superset init &&
+        superset run -h 0.0.0.0 -p 8088
+      "
 
 volumes:
   postgres_data:
+  superset_home:

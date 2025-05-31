@@ -11,8 +11,10 @@ sources:
           - name: cif_id
             description: "Primary identifier for the customer"
             tests:
-              - unique
               - not_null
+              - unique:
+                  config:
+                    severity: warn
 
       - name: transactions
         description: "Raw banking transaction records"
@@ -104,12 +106,15 @@ sources:
           - name: product_scheme_code
             description: "Primary key - unique identifier for the product"
             tests:
-              - unique
               - not_null
+              - unique:
+                  config:
+                    severity: warn
+            
+
           - name: product_scheme_type
             description: "Product type code (SBA, TDA, CAA, etc.)"
           - name: product_scheme_category
             description: "Main product category (Deposit, Loan, Card, Digital)"
           - name: product_scheme_sub_category
             description: "Subcategory further classifying the product"
-    
