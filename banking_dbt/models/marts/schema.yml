@@ -1,0 +1,89 @@
+version: 2
+
+models:
+  - name: customer_summary
+    description: "Customer-level aggregated summary with key metrics like total transactions, average transaction value, and digital engagement."
+    columns:
+      - name: customer_id
+        description: "Unique identifier of the customer."
+
+      - name: full_name
+        description: "Full name of the customer."
+
+      - name: total_transactions
+        description: "Total number of transactions performed by the customer."
+
+      - name: total_transaction_amount
+        description: "Cumulative transaction value."
+
+      - name: avg_transaction_amount
+        description: "Average amount spent per transaction."
+
+      - name: digital_transaction_count
+        description: "Number of transactions performed via digital channels."
+
+      - name: digital_engagement_rate
+        description: "Proportion of digital transactions to total transactions."
+
+  - name: product_summary
+    description: "Summary of product usage metrics based on linked account and transaction data."
+    columns:
+      - name: product_code
+        description: "Unique identifier of the product."
+        tests:
+              - not_null
+              - unique:
+                  config:
+                    severity: warn
+
+      - name: product_category
+        description: "High-level product category (Deposit, Loan, etc.)."
+
+      - name: product_class
+        description: "Derived classification (Asset, Liability, Service)."
+
+      - name: is_card_product
+        description: "Boolean flag indicating if it's a card product."
+
+      - name: account_count
+        description: "Number of accounts associated with the product."
+
+      - name: total_transactions
+        description: "Total number of transactions for the product."
+
+      - name: total_transaction_amount
+        description: "Sum of transaction amounts linked to this product."
+
+
+  - name: card_usage_summary
+    description: "Summary of card transactions by card and channel."
+    columns:
+      - name: card_number
+        description: "Unique identifier of the card used."
+        tests:
+          - not_null
+
+      - name: account_number
+        description: "Account number associated with the card."
+
+      - name: card_type
+        description: "Type of card (Debit/Credit)."
+
+      - name: card_status_desc
+        description: "Human-readable card status."
+
+      - name: card_provider
+        description: "Derived card provider from card number prefix."
+
+      - name: channel_type
+        description: "Channel used for transaction (should be 'BY_CARD')."
+
+      - name: total_card_transactions
+        description: "Count of card transactions for the date."
+
+      - name: total_transaction_amount
+        description: "Total transaction amount for the card and day."
+
+      - name: avg_transaction_amount
+        description: "Average transaction amount per card transaction."
+  

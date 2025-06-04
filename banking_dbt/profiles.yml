@@ -1,0 +1,12 @@
+banking_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres         
+      user: postgres
+      password: postgres123
+      port: 5432             
+      dbname: banking
+      schema: staging
+      threads: 4

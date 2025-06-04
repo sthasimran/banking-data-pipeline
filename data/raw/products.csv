@@ -1,0 +1,13 @@
+product_scheme_code,product_scheme_type,product_scheme_category,Product_scheme_sub_category
+PDSC12,SBA,Deposit,Savings
+PDSC11,SBA,Deposit,Fixed
+PDSC10,TDA,Deposit,Fixed
+PDSC9,SBA,Deposit,Call
+PDSC8,CAA,Deposit,Current
+PDSC7,CAA,Deposit,Margin
+PDSC6,LAA,Loan,
+PDSC5,ODA,Loan,
+PDSC4,PCA,Loan,
+PDSC3,,Debit Card,card
+PDSC2,,Credit Card,card
+PDSC1,,DIgital ,Mobile
